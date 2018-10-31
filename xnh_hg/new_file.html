@@ -1,0 +1,44 @@
+<html>
+<head>
+	<title>固定头部文件</title>
+	<style type="text/css">
+body{font-family: "微软雅黑";}
+.active{
+    background: -webkit-linear-gradient(top,red,yellow);
+}
+ul{float: left;width: 500px;height: 30px;background: red;line-height: 30px;}
+li{list-style: none;float: left;}
+a{text-align: center;line-height: 30px;display: block;color: #fff;width: 70px;text-decoration: none;}
+a:hover{background: green;}
+
+	</style>
+</head>
+<body>
+<div id="nav">
+    <ul>
+        <li><a href="#1">首页</a></li>
+        <li><a href="#2">产品</a></li>
+        <li><a href="#3">地址</a></li>
+        <li><a href="#4">关于</a></li>
+        <li><a href="#5">联系</a></li>
+    </ul>
+</div>
+
+</body>
+       <script type="text/javascript">
+        var myNav=document.getElementById("nav").getElementsByTagName("a");
+        var currenturl = document.location.href;
+        for(var i=0;i<myNav.length;i++){
+            var aurl=myNav[i].getAttribute("href");
+            if(currenturl.indexOf(aurl)!=-1){
+                myNav[i].className="active";
+                myNav[0].className="";
+            }
+        }
+        </script>
+--------------------- 
+作者：天子666 
+来源：CSDN 
+原文：https://blog.csdn.net/u011263845/article/details/45974417 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+</html>
